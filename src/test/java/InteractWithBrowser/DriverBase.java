@@ -1,12 +1,13 @@
 package InteractWithBrowser;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-class DriverBase {
+public class DriverBase {
 
-    protected FirefoxDriver driver;
+	protected WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
