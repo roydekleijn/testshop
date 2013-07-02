@@ -6,16 +6,16 @@ import org.testng.annotations.BeforeMethod;
 
 class DriverBase {
 
-    protected FirefoxDriver driver;
+  protected FirefoxDriver driver;
 
-    @BeforeMethod
-    public void setUp() {
-        driver = new FirefoxDriver();
-        driver.get("http://selenium.polteq.com/testshop/index.php");
-    }
+  @BeforeMethod
+  public void setUp() {
+    driver = new FirefoxDriver();
+    driver.get("http://selenium.polteq.com/testshop/index.php");
+  }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.close();
-    }
+  @AfterMethod
+  public void tearDown() {
+    driver.close();
+  }
 }
