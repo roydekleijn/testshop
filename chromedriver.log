@@ -1,0 +1,13 @@
+[0622/212823:INFO:chromedriver_server.cc(76)] Handling request: /status 
+[0622/212823:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"","status":0,"value":{"build":{"version":"alpha"},"os":{"arch":"x86_64","name":"Windows NT","version":"6.1 SP1"}}}
+[0622/212823:INFO:chromedriver_server.cc(76)] Handling request: /session {"desiredCapabilities":{"platform":"ANY","browserName":"chrome","chromeOptions":{"args":[],"extensions":[]},"version":"","chrome.switches":[]}}
+[0622/212823:INFO:chrome_launcher.cc(74)] Using chrome from C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[0622/212826:INFO:chromedriver_server.cc(81)] Done handling request: 303 
+[0622/212826:INFO:chromedriver_server.cc(76)] Handling request: /session/f6fecf6d7ee2c8b61bfdec9ec6078382 
+[0622/212826:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"f6fecf6d7ee2c8b61bfdec9ec6078382","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","cssSelectorsEnabled":true,"databaseEnabled":true,"driverVersion":"0.8","handlesAlerts":true,"javascriptEnabled":true,"locationContextEnabled":true,"nativeEvents":true,"platform":"Windows NT","rotatable":false,"takesScreenshot":true,"version":"27.0.1453.116","webStorageEnabled":true}}
+[0622/212826:INFO:chromedriver_server.cc(76)] Handling request: /session/f6fecf6d7ee2c8b61bfdec9ec6078382/url {"url":"http://selenium.polteq.com/testshop/"}
+[0622/212830:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"f6fecf6d7ee2c8b61bfdec9ec6078382","status":0,"value":null}
+[0622/212830:INFO:chromedriver_server.cc(76)] Handling request: /session/f6fecf6d7ee2c8b61bfdec9ec6078382/title 
+[0622/212830:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"f6fecf6d7ee2c8b61bfdec9ec6078382","status":0,"value":"TestShop"}
+[0622/212830:INFO:chromedriver_server.cc(76)] Handling request: /session/f6fecf6d7ee2c8b61bfdec9ec6078382/window 
+[0622/212831:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"f6fecf6d7ee2c8b61bfdec9ec6078382","status":0,"value":null}
