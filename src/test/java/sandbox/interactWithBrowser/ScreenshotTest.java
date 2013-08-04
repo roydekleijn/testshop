@@ -14,14 +14,15 @@ import org.testng.annotations.Test;
 @Test
 public class ScreenshotTest {
 
-    public void takeScreenshot() throws IOException {
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://selenium.polteq.com/testshop/");
-        File scrFile = ((TakesScreenshot) driver)
-                .getScreenshotAs(OutputType.FILE);
-        String fileName = UUID.randomUUID().toString();
-        File targetFile = new File("target/screenshots/" + fileName + ".jpg");
-        FileUtils.copyFile(scrFile, targetFile);
-    }
+  public void takeScreenshot() throws IOException {
+    WebDriver driver = new FirefoxDriver();
+    driver.get("http://selenium.polteq.com/testshop/");
+    File scrFile = ((TakesScreenshot) driver)
+        .getScreenshotAs(OutputType.FILE);
+    String fileName = UUID.randomUUID().toString();
+    File targetFile = new File("target/screenshots/" + fileName
+        + ".jpg");
+    FileUtils.copyFile(scrFile, targetFile);
+  }
 
 }
