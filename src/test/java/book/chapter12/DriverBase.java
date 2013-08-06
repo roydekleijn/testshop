@@ -1,4 +1,4 @@
-package sandbox.clientSidePerformance.codeTimings;
+package book.chapter12;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

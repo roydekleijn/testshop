@@ -1,4 +1,4 @@
-package sandbox.clientSidePerformance.netExport;
+package book.chapter12;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 // Reference: http://www.softwareishard.com/blog/firebug/automate-page-load-performance-testing-with-firebug-and-selenium/
 
 @Test
-public class LoginTest extends DriverBase {
+public class LoginTest extends DriverBaseNetExport {
 
 	public void loginNetExport() {
 		// Navigate to login page
