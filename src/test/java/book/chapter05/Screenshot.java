@@ -1,22 +1,19 @@
-package sandbox.interactWithBrowser;
+package book.chapter05;
+
+import book.chapter09.tests.DriverBase;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
-
 @Test
-public class ScreenshotTest {
+public class Screenshot extends DriverBase {
 
   public void takeScreenshot() throws IOException {
-    WebDriver driver = new FirefoxDriver();
-    driver.get("http://selenium.polteq.com/testshop/");
     File scrFile = ((TakesScreenshot) driver)
         .getScreenshotAs(OutputType.FILE);
     String fileName = UUID.randomUUID().toString();
