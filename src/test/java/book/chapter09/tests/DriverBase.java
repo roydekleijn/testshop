@@ -1,4 +1,4 @@
-package book.chapter12;
+package book.chapter09.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
