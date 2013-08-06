@@ -23,8 +23,10 @@ public class DifferentDriverTest {
   }
 
   public void startChromeBrowser() {
-    System.setProperty("webdriver.chrome.driver", this.getClass()
-        .getClassLoader().getResource("chromedriver.exe").getPath());
+    System
+        .setProperty("webdriver.chrome.driver", this.getClass()
+            .getClassLoader().getResource("chromedriver.exe")
+            .getPath());
     WebDriver driver = new ChromeDriver();
     driver.get("http://selenium.polteq.com/testshop/");
     System.out.println(driver.getTitle());
@@ -32,10 +34,9 @@ public class DifferentDriverTest {
   }
 
   public void startInternetExplorerBrowser() {
-    System
-        .setProperty("webdriver.ie.driver", this.getClass()
-            .getClassLoader().getResource("IEDriverServer.exe")
-            .getPath());
+    System.setProperty("webdriver.ie.driver", this.getClass()
+        .getClassLoader().getResource("IEDriverServer.exe")
+        .getPath());
     WebDriver driver = new InternetExplorerDriver();
     driver.get("http://selenium.polteq.com/testshop/");
     System.out.println(driver.getTitle());

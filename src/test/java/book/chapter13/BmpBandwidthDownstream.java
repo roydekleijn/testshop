@@ -2,7 +2,7 @@ package book.chapter13;
 
 import org.testng.annotations.Test;
 
-@Test(groups = {"chapter13"})
+@Test(groups = { "chapter13" })
 public class BmpBandwidthDownstream extends BmpDriverBase {
 
   public void changeDownstream() throws InterruptedException {

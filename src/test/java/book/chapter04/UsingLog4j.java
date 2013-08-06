@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 
 @Test
 public class UsingLog4j {
-  private static Logger log = LogManager
-      .getLogger(UsingLog4j.class.getName());
+  private static Logger log = LogManager.getLogger(UsingLog4j.class
+      .getName());
 
   public void testLog4j() {
     log.info("Information message");

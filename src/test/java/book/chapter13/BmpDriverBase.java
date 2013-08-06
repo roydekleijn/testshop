@@ -39,7 +39,8 @@ public class BmpDriverBase {
 
   @AfterMethod
   public void teardown(ITestResult result) throws Exception {
-    server.getHar().writeTo(new File("target/" + result.getName() + ".json"));
+    server.getHar().writeTo(
+        new File("target/" + result.getName() + ".json"));
     server.stop();
     driver.quit();
   }

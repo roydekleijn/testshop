@@ -10,11 +10,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
 public class CollectionHasSize {
-
+  /* start */
   public void testAssert() {
     List<String> list = new ArrayList<String>();
     list.add("test");
     list.add("webdriver");
-    assertThat("Assert that the list has size of 3", list, Matchers.hasSize(3));
+    assertThat("Assert that the list has size of 3", list,
+        Matchers.hasSize(3));
   }
+  /* end */
 }

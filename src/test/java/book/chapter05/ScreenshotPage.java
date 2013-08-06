@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Test
-public class Screenshot extends DriverBase {
-
+public class ScreenshotPage extends DriverBase {
+  /* start */
   public void takeScreenshot() throws IOException {
     File scrFile = ((TakesScreenshot) driver)
         .getScreenshotAs(OutputType.FILE);
@@ -21,5 +21,5 @@ public class Screenshot extends DriverBase {
         + ".jpg");
     FileUtils.copyFile(scrFile, targetFile);
   }
-
+  /* end */
 }

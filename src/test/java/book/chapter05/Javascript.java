@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 
 @Test
 public class Javascript extends DriverBase {
-
+  /* start */
   public void executeJavascript() {
     JavascriptExecutor js = (JavascriptExecutor) driver;
     js.executeScript("return document.title");
   }
+  /* end */
 }

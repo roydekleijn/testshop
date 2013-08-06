@@ -10,7 +10,7 @@ import java.net.URL;
 
 @Test
 public class RemoteDriver {
-
+  /* start */
   public void remoteDriver() throws MalformedURLException {
     DesiredCapabilities cap = DesiredCapabilities.firefox();
     WebDriver driver = new RemoteWebDriver(new URL(
@@ -19,4 +19,5 @@ public class RemoteDriver {
     System.out.println(driver.getTitle());
     driver.quit();
   }
+  /* end */
 }

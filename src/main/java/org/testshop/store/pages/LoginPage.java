@@ -30,7 +30,8 @@ public class LoginPage extends PageBase implements IPage<LoginPage> {
     return this;
   }
 
-  public void loginWithUsernameAndPassword(String username, String password) {
+  public void loginWithUsernameAndPassword(String username,
+      String password) {
     usernameTextfield.sendKeys(username);
     passwordTextfield.sendKeys(password);
     submitButton.click();

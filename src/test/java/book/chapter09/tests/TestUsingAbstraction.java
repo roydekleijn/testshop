@@ -9,7 +9,8 @@ public class TestUsingAbstraction extends DriverBase {
   public void join() {
     HomePageAbstractPage homePage = new HomePageAbstractPage(driver);
     homePage.clickSigninLink();
-    SignInPageAbstractPage joinPage = new SignInPageAbstractPage(driver);
+    SignInPageAbstractPage joinPage = new SignInPageAbstractPage(
+        driver);
     joinPage.setUsername("Test");
     joinPage.setPassword("Case");
     joinPage.submitForm();

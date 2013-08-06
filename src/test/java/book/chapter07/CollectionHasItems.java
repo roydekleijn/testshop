@@ -10,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
 public class CollectionHasItems {
-
+  /* start */
   public void testAssert() {
     List<String> list = new ArrayList<String>();
     list.add("test");
@@ -18,4 +18,5 @@ public class CollectionHasItems {
     assertThat("Assert that the list contains: tedst", list,
         Matchers.hasItems("tedst"));
   }
+  /* end */
 }

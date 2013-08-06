@@ -35,7 +35,7 @@ public class CodeTimingsTimer {
     driver.findElement(By.id("passwd")).sendKeys("tester");
     timer.end();
     System.out.println("Totaltime: " + timer.getTotalTime()
-      + " milliseconds");
+        + " milliseconds");
     driver.findElement(By.id("SubmitLogin")).click();
   }
   /* end */
