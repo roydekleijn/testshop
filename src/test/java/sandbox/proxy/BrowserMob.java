@@ -16,56 +16,57 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class BrowserMob {
-	private WebDriver driver;
-	private ProxyServer server;
+  private WebDriver driver;
+  private ProxyServer server;
 
-	@BeforeMethod
-	public void setUp() throws Exception {
-		// start proxy
-		server = new ProxyServer(4444);
-		server.start();
+  @BeforeMethod
+  public void setUp() throws Exception {
+    // start proxy
+    server = new ProxyServer(4444);
+    server.start();
 
-		// get Selenium proxy object
-		Proxy proxy = server.seleniumProxy();
+    // get Selenium proxy object
+    Proxy proxy = server.seleniumProxy();
 
-		// configure desired capability
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.PROXY, proxy);
+    // configure desired capability
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability(CapabilityType.PROXY, proxy);
 
-		driver = new FirefoxDriver(capabilities);
+    driver = new FirefoxDriver(capabilities);
 
-		// create a new HAR with label
-		server.newHar("testshop");
-	}
+    // create a new HAR with label
+    server.newHar("testshop");
+  }
 
-	@AfterMethod
-	public void tearDown() throws Exception {
-		server.stop();
-		driver.close();
-	}
+  @AfterMethod
+  public void tearDown() throws Exception {
+    server.stop();
+    driver.close();
+  }
 
-	@Test
-	public void bmpCaptureData() throws IOException {
-		driver.get("http://selenium.polteq.com/testshop/index.php");
+  @Test
+  public void bmpCaptureData() throws IOException {
+    driver.get("http://selenium.polteq.com/testshop/index.php");
 
-		// server.waitForNetworkTrafficToStop(200, 30000);
+    // server.waitForNetworkTrafficToStop(200, 30000);
 
-		// get HAR data
-		Har har = server.getHar();
+    // get HAR data
+    Har har = server.getHar();
 
-		System.out.println(har.getLog().getEntries().size());
-		har.writeTo(new File("target/har.json"));
-	}
+    System.out.println(har.getLog().getEntries().size());
+    har.writeTo(new File("target/har.json"));
+  }
 
-	@Test
-	public void bmpBlacklist() throws IOException, InterruptedException {
-		server.blacklistRequests(".*default.jpg", 404);
-		driver.get("http://selenium.polteq.com/testshop/index.php");
+  @Test
+  public void bmpBlacklist() throws IOException,
+      InterruptedException {
+    server.blacklistRequests(".*default.jpg", 404);
+    driver.get("http://selenium.polteq.com/testshop/index.php");
 
-		// get HAR data
-		Har har = server.getHar();
+    // get HAR data
+    Har har = server.getHar();
 
-		System.out.println(har.getLog().getEntries().size());
-	}
+    System.out.println(har.getLog().getEntries().size());
+  }
 
 }

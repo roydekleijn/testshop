@@ -2,7 +2,7 @@ package book.chapter13;
 
 import org.testng.annotations.Test;
 
-@Test(groups = {"chapter13"})
+@Test(groups = { "chapter13" })
 public class BmpRequestTimeout extends BmpDriverBase {
 
   public void requestTimeout() throws InterruptedException {

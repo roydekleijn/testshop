@@ -7,9 +7,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
 public class NumberGreaterThan {
-
+  /* start */
   public void testAssert() {
     int n = 4;
-    assertThat("Assert that n is greater than 6", n, Matchers.greaterThan(6));
+    assertThat("Assert that n is greater than 6", n,
+        Matchers.greaterThan(6));
   }
+  /* end */
 }

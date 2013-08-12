@@ -7,10 +7,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
 public class StringStartsWith {
-
+  /* start */
   public void testAssert() {
     String s = "This is some text.";
     assertThat("Assert s to match the beginning of the string", s,
         Matchers.startsWith("Ths"));
   }
+  /* end */
 }

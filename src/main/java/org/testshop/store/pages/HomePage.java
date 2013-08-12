@@ -8,22 +8,23 @@ import org.testshop.store.IPage;
 import org.testshop.store.PageBase;
 
 public class HomePage extends PageBase implements IPage<HomePage> {
-	
-	@FindBy(how = How.CSS, using = "a.login")
-	private WebElement loginLink;
 
-	public HomePage(TestConfiguration config) {
-		super(config);
-	}
+  @FindBy(how = How.CSS, using = "a.login")
+  private WebElement loginLink;
 
-	public HomePage get() {
-		getConfig().getDriver().get("http://selenium.polteq.com/testshop/index.php");
-		return this;
-	}
+  public HomePage(TestConfiguration config) {
+    super(config);
+  }
 
-	public LoginPage clickOnLoginLink() {
-		loginLink.click();
-		return new LoginPage(config);
-	}
+  public HomePage get() {
+    getConfig().getDriver().get(
+        "http://selenium.polteq.com/testshop/index.php");
+    return this;
+  }
+
+  public LoginPage clickOnLoginLink() {
+    loginLink.click();
+    return new LoginPage(config);
+  }
 
 }

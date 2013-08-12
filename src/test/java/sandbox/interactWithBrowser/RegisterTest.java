@@ -9,32 +9,34 @@ import org.testng.annotations.Test;
 @Test
 public class RegisterTest extends DriverBase {
 
-	public void register() {
-		// Navigate to login page
-		driver.findElement(By.className("login")).click();
+  public void register() {
+    // Navigate to login page
+    driver.findElement(By.className("login")).click();
 
-		Random r = new Random();
-		driver.findElement(By.id("email_create")).sendKeys(
-				"test" + r.nextInt() + "@test.com");
+    Random r = new Random();
+    driver.findElement(By.id("email_create")).sendKeys(
+        "test" + r.nextInt() + "@test.com");
 
-		driver.findElement(By.id("SubmitCreate")).click();
+    driver.findElement(By.id("SubmitCreate")).click();
 
-		driver.findElement(By.id("id_gender1")).click();
+    driver.findElement(By.id("id_gender1")).click();
 
-		driver.findElement(By.id("customer_firstname")).sendKeys("tester");
-		driver.findElement(By.id("customer_lastname")).sendKeys("tester");
-		driver.findElement(By.id("passwd")).sendKeys("tester");
+    driver.findElement(By.id("customer_firstname")).sendKeys(
+        "tester");
+    driver.findElement(By.id("customer_lastname")).sendKeys(
+        "tester");
+    driver.findElement(By.id("passwd")).sendKeys("tester");
 
-		Select days = new Select(driver.findElement(By.id("days")));
-		days.selectByIndex(5);
+    Select days = new Select(driver.findElement(By.id("days")));
+    days.selectByIndex(5);
 
-		Select months = new Select(driver.findElement(By.id("months")));
-		months.selectByIndex(5);
-		Select years = new Select(driver.findElement(By.id("years")));
-		years.selectByIndex(5);
+    Select months = new Select(driver.findElement(By.id("months")));
+    months.selectByIndex(5);
+    Select years = new Select(driver.findElement(By.id("years")));
+    years.selectByIndex(5);
 
-		driver.findElement(By.id("customer_privacy")).click();
+    driver.findElement(By.id("customer_privacy")).click();
 
-		driver.findElement(By.id("submitAccount")).click();
-	}
+    driver.findElement(By.id("submitAccount")).click();
+  }
 }

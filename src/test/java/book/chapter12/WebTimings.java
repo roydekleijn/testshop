@@ -38,7 +38,7 @@ public class WebTimings {
     Long navigationStart = (Long) js
         .executeScript("return window.performance.timing.navigationStart;");
     System.out.println("Page Load Time = "
-      + (loadEventEnt - navigationStart));
+        + (loadEventEnt - navigationStart));
     driver.findElement(By.id("SubmitLogin")).click();
   }
   /* end */

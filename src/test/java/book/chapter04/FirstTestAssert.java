@@ -17,12 +17,13 @@ public class FirstTestAssert {
       // Navigate to login page
       driver.findElement(By.className("login")).click();
       // Fill in the form
-      driver.findElement(By.id("email")).sendKeys("tester@test.com");
+      driver.findElement(By.id("email"))
+          .sendKeys("tester@test.com");
       driver.findElement(By.id("passwd")).sendKeys("tester");
       driver.findElement(By.id("SubmitLogin")).click();
       // Assert if element is displayed
-      Assert.assertTrue(driver.findElement(By.cssSelector("ul.myaccount_lnk_list"))
-          .isDisplayed());
+      Assert.assertTrue(driver.findElement(
+          By.cssSelector("ul.myaccount_lnk_list")).isDisplayed());
       // Quit browser
       driver.quit();
     }

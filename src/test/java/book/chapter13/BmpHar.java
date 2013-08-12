@@ -2,7 +2,7 @@ package book.chapter13;
 
 import org.testng.annotations.Test;
 
-@Test(groups = {"chapter13"})
+@Test(groups = { "chapter13" })
 public class BmpHar extends BmpDriverBase {
 
   public void createHar() throws Exception {
@@ -13,6 +13,7 @@ public class BmpHar extends BmpDriverBase {
     Thread.sleep(7500);
 
     // get the HAR data
-    System.out.println(server.getHar().getLog().getEntries().size());
+    System.out
+        .println(server.getHar().getLog().getEntries().size());
   }
 }

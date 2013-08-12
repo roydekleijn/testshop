@@ -7,11 +7,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @Test
 public class CombinedBoth {
-
+  /* start */
   public void testAssert() {
     String s = "This is some text.";
     assertThat(
         "Assert a string starting with Tis and a string ending with ext.",
-        s, Matchers.both(Matchers.startsWith("Tis")).and(Matchers.endsWith("ext.")));
+        s,
+        Matchers.both(Matchers.startsWith("Tis")).and(
+            Matchers.endsWith("ext.")));
   }
+  /* end */
 }

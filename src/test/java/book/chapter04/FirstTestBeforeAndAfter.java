@@ -34,7 +34,7 @@ public class FirstTestBeforeAndAfter {
     driver.findElement(By.id("SubmitLogin")).click();
     // Assert if element is displayed
     // Assert if element is displayed
-    Assert.assertTrue(driver.findElement(By.cssSelector("ul.myaccount_lnk_list"))
-        .isDisplayed());
+    Assert.assertTrue(driver.findElement(
+        By.cssSelector("ul.myaccount_lnk_list")).isDisplayed());
   }
 }

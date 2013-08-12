@@ -7,19 +7,19 @@ import org.testng.annotations.BeforeMethod;
 
 public class DriverBase {
 
-	protected WebDriver driver;
+  protected WebDriver driver;
 
-	@BeforeMethod
-	public void setUp() {
-		System.setProperty("webdriver.ie.driver",
-				"src/test/resources/IEDriverServer.exe");
-		driver = new InternetExplorerDriver();
-		driver.get("http://selenium.polteq.com/testshop/index.php");
-	}
+  @BeforeMethod
+  public void setUp() {
+    System.setProperty("webdriver.ie.driver",
+        "src/test/resources/IEDriverServer.exe");
+    driver = new InternetExplorerDriver();
+    driver.get("http://selenium.polteq.com/testshop/index.php");
+  }
 
-	@AfterMethod
-	public void tearDown() {
-		driver.close();
-		driver.quit();
-	}
+  @AfterMethod
+  public void tearDown() {
+    driver.close();
+    driver.quit();
+  }
 }

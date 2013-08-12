@@ -16,6 +16,7 @@ public class LoginTest extends DriverBase {
   }
 
   public void loginSuccesful() {
-    loginPage.loginWithUsernameAndPassword("tester@test.com", "1qazxsw2");
+    loginPage.loginWithUsernameAndPassword("tester@test.com",
+        "1qazxsw2");
   }
 }
