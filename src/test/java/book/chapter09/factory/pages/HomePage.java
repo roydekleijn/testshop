@@ -1,4 +1,4 @@
-package book.chapter09.pages;
+package book.chapter09.factory.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePageDefineWebElements {
+public class HomePage {
+  private WebDriver driver;
+
   @FindBy(how = How.CSS, using = "h1#etsy a")
   private WebElement homeLink;
 
@@ -16,7 +18,18 @@ public class HomePageDefineWebElements {
   @FindBy(how = How.CSS, using = "a#sign-in")
   private WebElement signinLink;
 
-  public HomePageDefineWebElements(WebDriver driver) {
+  public HomePage(WebDriver driver) {
+    this.driver = driver;
     PageFactory.initElements(driver, this);
+  }
+
+  public HomePage clickRegisterLink() {
+    registerLink.click();
+    return this;
+  }
+
+  public SignInPage clickSigninLink() {
+    signinLink.click();
+    return new SignInPage(driver);
   }
 }

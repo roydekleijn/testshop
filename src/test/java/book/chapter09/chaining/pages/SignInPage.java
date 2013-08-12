@@ -1,4 +1,4 @@
-package book.chapter09.pages;
+package book.chapter09.chaining.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignInPageAbstractPage {
+public class SignInPage {
+  private WebDriver driver;
+
   @FindBy(how = How.CSS, using = "input#username-existing")
   private WebElement usernameTextfield;
 
@@ -16,21 +18,23 @@ public class SignInPageAbstractPage {
   @FindBy(how = How.CSS, using = "input#signin_button")
   private WebElement signInButton;
 
-  public SignInPageAbstractPage(WebDriver driver) {
+  public SignInPage(WebDriver driver) {
+    this.driver = driver;
     PageFactory.initElements(driver, this);
   }
 
-  public SignInPageAbstractPage setUsername(String username) {
+  public SignInPage setUsername(String username) {
     usernameTextfield.sendKeys(username);
     return this;
   }
 
-  public SignInPageAbstractPage setPassword(String password) {
+  public SignInPage setPassword(String password) {
     passwordTextfield.sendKeys(password);
     return this;
   }
 
-  public void submitForm() {
+  public MemberPage submitForm() {
     signInButton.click();
+    return new MemberPage(driver);
   }
 }

@@ -6,9 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignInPageMethodChaining {
-  private WebDriver driver;
-
+public class SignInPage {
   @FindBy(how = How.CSS, using = "input#username-existing")
   private WebElement usernameTextfield;
 
@@ -18,23 +16,19 @@ public class SignInPageMethodChaining {
   @FindBy(how = How.CSS, using = "input#signin_button")
   private WebElement signInButton;
 
-  public SignInPageMethodChaining(WebDriver driver) {
-    this.driver = driver;
+  public SignInPage(WebDriver driver) {
     PageFactory.initElements(driver, this);
   }
 
-  public SignInPageMethodChaining setUsername(String username) {
+  public void setUsername(String username) {
     usernameTextfield.sendKeys(username);
-    return this;
   }
 
-  public SignInPageMethodChaining setPassword(String password) {
+  public void setPassword(String password) {
     passwordTextfield.sendKeys(password);
-    return this;
   }
 
-  public MemberPage submitForm() {
+  public void submitForm() {
     signInButton.click();
-    return new MemberPage(driver);
   }
 }

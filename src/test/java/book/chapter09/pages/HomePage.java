@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePageAbstractPage {
+public class HomePage {
 
   @FindBy(how = How.CSS, using = "h1#etsy a")
   private WebElement homeLink;
@@ -17,7 +17,7 @@ public class HomePageAbstractPage {
   @FindBy(how = How.CSS, using = "a#sign-in")
   private WebElement signinLink;
 
-  public HomePageAbstractPage(WebDriver driver) {
+  public HomePage(WebDriver driver) {
     PageFactory.initElements(driver, this);
   }
 

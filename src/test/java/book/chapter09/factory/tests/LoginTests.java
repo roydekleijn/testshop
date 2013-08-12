@@ -1,9 +1,10 @@
-package book.chapter09.tests;
+package book.chapter09.factory.tests;
 
-import book.chapter09.pages.Factory;
+import book.chapter09.factory.pages.Factory;
+
 import org.testng.annotations.Test;
 
-public class TestUsingFactory extends DriverBase{
+public class LoginTests extends DriverBase{
   @Test
    public void join() {
    Factory pages = new Factory(driver);
