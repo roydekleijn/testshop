@@ -12,7 +12,7 @@ public class DriverBase {
   @BeforeMethod
   public void setUp() {
     driver = new FirefoxDriver();
-    driver.get("http://selenium.polteq.com/testshop/index.php");
+    //driver.get("http://selenium.polteq.com/testshop/index.php");
   }
 
   @AfterMethod
