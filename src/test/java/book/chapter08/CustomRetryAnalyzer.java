@@ -3,6 +3,7 @@ package book.chapter08;
 import org.testng.ITestResult;
 import org.testng.util.RetryAnalyzerCount;
 
+/* start */
 public class CustomRetryAnalyzer extends RetryAnalyzerCount {
 
   public CustomRetryAnalyzer() {
@@ -17,5 +18,5 @@ public class CustomRetryAnalyzer extends RetryAnalyzerCount {
       return true;
     }
   }
-
 }
+/* end */

@@ -1,0 +1,11 @@
+<properties>
+  <property>
+    <name>usedefaultlisteners</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>listener</name>
+    <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter
+    </value>
+  </property>
+</properties>

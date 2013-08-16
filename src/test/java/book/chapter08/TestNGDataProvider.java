@@ -6,11 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 
 public class TestNGDataProvider extends DriverBase {
-
+  /* start */
   @DataProvider
   public Object[][] credentials() {
-    return new Object[][] { { "tester@test.com", "tester" },
-        { "nonexistinguser", "tester" }, };
+    return new Object[][] {
+      {"tester@test.com", "tester"},
+      {"nonexistinguser", "tester"},
+    };
   }
 
   public void login(String email, String password) {
@@ -23,4 +25,5 @@ public class TestNGDataProvider extends DriverBase {
     Assert.assertTrue(driver.findElement(
         By.cssSelector("ul.myaccount_lnk_list")).isDisplayed());
   }
+  /* end */
 }

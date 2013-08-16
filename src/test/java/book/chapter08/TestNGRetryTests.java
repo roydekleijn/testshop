@@ -5,11 +5,12 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-public class TestNGRetry {
+/* start */
+@Test(retryAnalyzer = CustomRetryAnalyzer.class)
+public class TestNGRetryTests {
 
-  @Test(retryAnalyzer = CustomRetryAnalyzer.class)
   public void testForRetry() {
     Assert.assertEquals(new Random().nextInt(5), 3);
   }
-
 }
+/* end */
