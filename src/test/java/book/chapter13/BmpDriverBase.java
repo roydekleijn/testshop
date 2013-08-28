@@ -7,8 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 
@@ -16,7 +16,7 @@ public class BmpDriverBase {
   protected WebDriver driver;
   protected ProxyServer server;
 
-  @BeforeMethod
+  @BeforeClass
   public void setup() throws Exception {
     // start the proxy
     server = new ProxyServer(4444);
@@ -37,7 +37,7 @@ public class BmpDriverBase {
     server.setCaptureHeaders(false);
   }
 
-  @AfterMethod
+  @AfterClass
   public void teardown(ITestResult result) throws Exception {
     server.getHar().writeTo(
         new File("target/" + result.getName() + ".json"));
